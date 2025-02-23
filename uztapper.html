@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UZ TAPPER - Bosish O‘yini</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            position: relative;
+        }
+
+        .bonus-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
+            transition: 0.2s ease-in-out;
+        }
+
+        .bonus-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        .bonus-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.7);
+        }
+
+        .counter {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-top: 60px;
+        }
+
+        .tap-button {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 15px rgba(255, 94, 0, 0.5);
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            outline: none;
+            transition: 0.2s ease-in-out;
+            background: linear-gradient(135deg, #ff9500, #ff5e00);
+        }
+
+        .tap-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(255, 94, 0, 0.7);
+        }
+
+        .tasks-button {
+            position: absolute;
+            bottom: 20px;
+            background: linear-gradient(135deg, #28a745, #1e7e34);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.5);
+            transition: 0.2s ease-in-out;
+        }
+
+        .tasks-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.7);
+        }
+
+    </style>
+</head>
+<body>
+
+    <button class="bonus-button" onclick="claimBonus()">
+        <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="calendar">
+        Kunlik Bonus
+    </button>
+
+    <div class="counter">Bosishlar soni: <span id="count">0</span></div>
+    <button class="tap-button" onclick="increaseCount()">UZ TAPPER</button>
+
+    <button class="tasks-button" onclick="openTasks()">🎯 Vazifalar</button>
+
+    <script>
+        let count = 0;
+        let bonusClaimed = false;
+
+        function increaseCount() {
+            count++;
+            document.getElementById("count").innerText = count;
+        }
+
+        function claimBonus() {
+            if (!bonusClaimed) {
+                count += 1000;
+                document.getElementById("count").innerText = count;
+                bonusClaimed = true;
+                alert("Kunlik bonus olindi: +1000 coin!");
+            } else {
+                alert("Bugungi bonus allaqachon olingan!");
+            }
+        }
+
+        function openTasks() {
+            window.location.href = "tasks.html";
+        }
+    </script>
+
+</body>
+</html>
