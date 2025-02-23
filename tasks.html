@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vazifalar - UZ TAPPER</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .task-button {
+            background: linear-gradient(135deg, #28a745, #1e7e34);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.5);
+            transition: 0.2s ease-in-out;
+            margin-top: 10px;
+        }
+
+        .task-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.7);
+        }
+
+        .back-button {
+            margin-top: 20px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.7);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>🎯 Vazifalar</h2>
+    <button class="task-button" onclick="completeTask()">
+        📷 Instagram sahifamizga obuna bo‘ling (10,000 coin)
+    </button>
+
+    <button class="back-button" onclick="goBack()">⬅️ Orqaga</button>
+
+    <script>
+        let taskCompleted = false;
+
+        function completeTask() {
+            if (!taskCompleted) {
+                alert("Instagram sahifamizga obuna bo‘ldingiz! +10,000 coin qo‘shildi!");
+                taskCompleted = true;
+            } else {
+                alert("Siz bu vazifani allaqachon bajargansiz!");
+            }
+        }
+
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>
