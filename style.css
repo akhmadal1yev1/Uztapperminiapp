@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+}
+
+#tap-btn {
+    font-size: 22px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: gold;
+    color: black;
+}
+
+.back-btn {
+    background-color: red;
+}
+
